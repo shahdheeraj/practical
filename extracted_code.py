@@ -1,5 +1,4 @@
 
-
 # Prac_1a 
 # Create a program that asks the user to enter their name and their age. Print out
 #  a
@@ -13,6 +12,7 @@ dob = currentyear - age
 print(dob + 100)
 
 # Prac_1b
+#even or odd number
 num = int(input("Enter a number: "))
 if num % 2 == 0:
     print(num, "is Even")
@@ -20,6 +20,7 @@ else:
     print(num, "is Odd")
 
 # Prac_1c
+#fibonacci series
 n = int(input("Enter a number: "))
 first = 0
 second = 1
@@ -30,6 +31,8 @@ for i in range(n):
     second = second + temp
 
 # Prac_1d
+#reverse the user define value
+
 def rev(n):
     reverse = 0
     while n > 0:
@@ -43,6 +46,8 @@ reverse1 = rev(n)
 print("Reverse number: ", reverse1)
 
 # Prac_1e
+#armstrong and palindrome
+
 def Armstrong(n):
     temp = n
     result = 0
@@ -72,6 +77,8 @@ Armstrong(n)
 Palindrome(n)
 
 # Prac_1f
+#Factorial
+
 def fact(n):
     if n == 1:
         return 1
@@ -83,6 +90,8 @@ result = fact(n)
 print(result)
 
 # Prac_2a
+#vowel
+
 def vowel(s):
     return s.lower() in ['a', 'e', 'i', 'o', 'u']
 
@@ -91,6 +100,8 @@ result = vowel(s)
 print(result)
 
 # Prac_2b
+#length of a given list or string
+
 def findlen(str_or_list):
     counter = 0
     for _ in str_or_list:
@@ -101,6 +112,8 @@ str_or_list = input("Enter a string or list: ")
 print(findlen(str_or_list))
 
 # Prac_2c
+#histofram
+
 def histogram(lst):
     for i in lst:
         print(i * '*')
@@ -114,6 +127,8 @@ for i in range(ln):
 histogram(lst)
 
 # Prac_3a
+#Pangram
+
 def pangram(str, alphabet):
     flag = True
     for char in alphabet:
@@ -129,6 +144,7 @@ alphabet = "abcdefghijklmnopqrstuvwxyz"
 pangram(str, alphabet)
 
 # Prac_3b
+# write a program that prints out all the element of the list that are less than 5
 a = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]
 for i in a:
     if i < 5:
@@ -138,6 +154,8 @@ lst = [i for i in a if i < 5]
 print(lst)
 
 # Prac_4a
+# atleast one common member
+
 lst1 = [1, 2, 3, 4, 5]
 lst2 = [5, 6, 7, 8, 9]
 for x in lst1:
@@ -146,6 +164,8 @@ for x in lst1:
             print("True")
 
 # Prac_4b
+# specified after removing the 0th,2nd,4th,5th element
+
 lst = [0, 1, 2, 3, 4, 5, 6, 7, 8]
 print("Original List:", lst)
 for i in lst:
@@ -153,6 +173,8 @@ for i in lst:
         print(i, end=" ")
 
 # Prac_4c
+#clone or copy a list
+
 original_list1 = [1, 2, 3, 4, 5]
 print("Original List1:", original_list1)
 new_list = list(original_list1)
@@ -164,6 +186,8 @@ copy = original_list2.copy()
 print("COPY:", copy)
 
 # Prac_5a
+# sort a dictionary by value
+
 import operator
 d = {'C': 90, 'C++': 100, 'Python': 80, 'Java': 60}
 print("Original dictionary:", d)
@@ -175,6 +199,8 @@ desc = dict(sorted(d.items(), key=operator.itemgetter(1), reverse=True))
 print("Descending:", desc)
 
 # Prac_5b
+# script to concatenate ,dictionarie to create a new one
+
 dict1 = {1: 10, 2: 20}
 dict2 = {3: 30, 4: 40}
 dict3 = {5: 50, 6: 60}
@@ -185,6 +211,8 @@ for d in (dict1, dict2, dict3):
 print(dict4)
 
 # Prac_5c
+# sum all the items in dictionary
+
 dict1 = {'Python': 90, 'C++': 100, 'Java': 80, 'C': 50}
 print(sum(dict1.values()))
 
@@ -195,16 +223,22 @@ for value in dict2.values():
 print(total_sum)
 
 # Prac_6a
+# read an entire text value
+
 f = open("myfile.txt", "r")
 print(f.read())
 f.close()
 
 # Prac_6b
+# to append text a file and display the text
+
 f = open("myfile.txt", "a")
 f.write("Eleven")
 f.close()
 
 # Prac_6c
+# read last N lines
+
 n = int(input("Enter n lines: "))
 f = open("myfile.txt", "r")
 for line in (f.readlines()[-n:]):
@@ -212,6 +246,8 @@ for line in (f.readlines()[-n:]):
 f.close()
 
 # Prac_7a
+# information of student and display
+
 class Student:
     def __init__(self, rollno, name, age, phone):
         self.rollno = rollno
@@ -236,6 +272,8 @@ print("--------- Display Student Details ----------")
 ob.display()
 
 # Prac_7b
+# Inheritance(single,multiple,multi level )
+
 class Parent:
     def first(self):
         print("This is a parent class")
@@ -285,6 +323,7 @@ ob.fun2()
 ob.fun3()
 
 # Prac_7c
+# dont do
 class Numbers:
     MULTIPLER = 5
 
@@ -330,6 +369,7 @@ print("Values:", ob.value)
 
 #pra 8 a
 #Try to configure the widget with various options like: bg=â redâ , 
+
 from tkinter import *
 
 window = Tk()
